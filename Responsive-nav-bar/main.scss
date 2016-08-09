@@ -1,0 +1,86 @@
+$primary-color: black;
+$secondary-color: gray;
+$text-color: white;
+
+$mobile-width: 580px;
+
+$font-stack: sans-serif;
+
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: $font-stack;
+}
+
+
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+nav ul {
+	background-color: $primary-color;
+	overflow: hidden;
+	padding: 0;
+	margin: 0;
+	color: $text-color;
+	-webkit-transition: max-height 0.5s;
+	-ms-transition: max-height 0.5s;
+	-moz-transition: max-height 0.5s;
+	-o-transition: max-height 0.5s;
+	transition: max-height 0.5s;
+}
+
+nav ul li {
+	display: inline-block;
+	padding: 10px 20px;
+	text-transform: uppercase;
+
+	&:hover {
+		color: $secondary-color;
+	}
+}
+
+.mobile-nav {
+	width: 100%;
+	background: $secondary-color;
+	box-sizing: border-box;
+	padding: 10px 20px;
+	height: 38px;
+	cursor: pointer;
+	color: $text-color;
+	text-transform: uppercase;
+	display: none;
+}
+
+.menu-icon-line {
+	width: 20px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+}
+
+.menu-icon {
+	float: right;
+	margin: 0;
+}
+
+@media screen and (max-width: $mobile-width) {
+	nav ul {
+		max-height: 0;
+	}
+	.showing {
+		max-height: 10em;
+	}
+	nav ul li {
+		box-sizing: border-box;
+		width: 100%;
+		padding: 10px 15px;
+		text-align: left;
+	}
+	.mobile-nav {
+		display: block;
+	}
+}
