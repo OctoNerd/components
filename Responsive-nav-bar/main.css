@@ -24,7 +24,9 @@ nav ul li {
   padding: 10px 20px;
   text-transform: uppercase; }
   nav ul li:hover {
-    color: gray; }
+    color: gray;
+    background-color: #333333;
+    cursor: pointer; }
 
 .mobile-nav {
   width: 100%;
@@ -37,15 +39,16 @@ nav ul li {
   text-transform: uppercase;
   display: none; }
 
-.menu-icon-line {
+.menu-icon-line, .menu-icon-line-mid {
   width: 20px;
   height: 3px;
   background-color: white;
-  margin: 3px 0; }
+  margin: 0; }
+  .menu-icon-line-mid {
+    margin: 4px 0; }
 
 .menu-icon {
-  float: right;
-  margin: 0; }
+  float: right; }
 
 @media screen and (max-width: 580px) {
   nav ul {

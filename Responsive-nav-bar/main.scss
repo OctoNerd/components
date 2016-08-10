@@ -1,5 +1,6 @@
 $primary-color: black;
 $secondary-color: gray;
+$accent-color: #333333;
 $text-color: white;
 
 $mobile-width: 580px;
@@ -40,6 +41,8 @@ nav ul li {
 
 	&:hover {
 		color: $secondary-color;
+		background-color: $accent-color;
+		cursor: pointer;
 	}
 }
 
@@ -59,12 +62,16 @@ nav ul li {
 	width: 20px;
     height: 3px;
     background-color: white;
-    margin: 3px 0;
+    margin: 0;
+
+    &-mid {
+    	@extend .menu-icon-line;
+    	margin: 4px 0;
+    }
 }
 
 .menu-icon {
 	float: right;
-	margin: 0;
 }
 
 @media screen and (max-width: $mobile-width) {
