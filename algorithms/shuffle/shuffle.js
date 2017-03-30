@@ -1,15 +1,16 @@
 //the purpose of this algorithm is to iterate through an array and shuffle the contents unbiasly
-
-
-var arr = ['A','B','C','D','E','F','G','H']; //create an array
-var i = arr.length, j, temp;
-
-while(--i > 0) { //iterate through the array starting at the end and working back
-    j = Math.floor(Math.random() * (i+1)); //with each iteration, get a random number between 0 and the length of the array
-    temp = arr[i]; //swap the contents at the random array position with the contents of the iteration position
-    arr[i] = arr[j];
-    arr[j] = temp;
+Array.prototype.shuffle = function() {
+    var i = this.length, j, temp;
+    while(--i > 0) {
+        j = Math.floor(Math.random() * (i+1));
+        temp = this[i];
+        this[i] = this[j];
+        this[j] = temp;
+    }
+    return this;
 }
 
-//display array to screen
-document.write(arr);
+var arr = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z',];
+var result = arr.shuffle();
+
+document.write(result);
